@@ -1,11 +1,11 @@
 import "./App.css";
-import Navbar from "./components/Navbar.jsx";
-import MainHero from "./components/MainHero.jsx";
-import Card from "./Card.jsx";
+import Navbar from "./components/Navbar";
+import MainHero from "./components/MainHero";
+import Card from "./components/Card";
 import data from "./data.js";
 
 
-function App() {
+const App = () => {
   const cards = data.map((item) => {
     return (
       <Card

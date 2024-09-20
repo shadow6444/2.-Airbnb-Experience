@@ -1,4 +1,6 @@
-import heroImg from "../assets/photo-grid.png";
+import heroImg from "../../assets/photo-grid.png";
+import './MainHero.css';
+
 export default function MainHero() {
   return (
     <>

@@ -1,29 +1,38 @@
-import './App.css'
-import Navbar from './components/Navbar.jsx'
-import MainHero from './components/MainHero.jsx'
-import Card from './Card.jsx'
-import card from "./assets/katie-zaferes.png";
-
+import "./App.css";
+import Navbar from "./components/Navbar.jsx";
+import MainHero from "./components/MainHero.jsx";
+import Card from "./Card.jsx";
+import data from "./data.js";
 /*
-Challenge: Pass props to the Card component and display that data
+Challenge:
 
-- img ("katie-zaferes.png")
-- rating ("5.0")
-- reviewCount (6)
-- country (Whatever you want)
-- title ("Life Lessons with Katie Zaferes")
-- price (136)
+- import the array of data from data.js
+- map over the array to create <Card /> components
+- display the array of card components under the navbar
+  (in place of the current <Card /> component)
 
+Note: We haven't styled the group of components yet, so they'll
+still be block elements, stacked vertically. We'll add styling later.
 */
 
 function App() {
+  const cards = data.map((item) => {
+    return (
+      <Card
+        key={item.id}
+        {...item}
+      />
+    );
+  });
   return (
     <>
-      <Navbar/>
-      <MainHero/>
-      <Card img={card} rating="5.0" reviewCount="(6)" country="USA" title="Life Lessons with Katie Zaferes" price={136}/>
+      <Navbar />
+      <MainHero />
+      <div className="card-items">
+        {cards}
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

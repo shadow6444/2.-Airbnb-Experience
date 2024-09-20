@@ -1,4 +1,3 @@
-import "./App.css";
 import Navbar from "./components/Navbar";
 import MainHero from "./components/MainHero";
 import Card from "./components/Card";
